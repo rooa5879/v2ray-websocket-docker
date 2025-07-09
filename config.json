@@ -1,0 +1,28 @@
+sudo mkdir -p /etc/v2ray
+sudo cat > /etc/v2ray/config.json <<EOF
+{
+  "inbounds": [
+  {
+    "port": 80,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "b622b282-73f6-4dcd-8ec9-f2c63321272c",
+          "alterId": 64
+        }
+      ]
+    },
+    "streamSettings": {
+      "network": "ws"
+    }
+  }
+  ],
+  "outbounds": [
+  {
+    "protocol": "freedom",
+    "settings": {}
+  }
+  ]
+}
+EOF
